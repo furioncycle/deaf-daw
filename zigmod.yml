@@ -1,0 +1,7 @@
+id: tmekkagvmdv6q75a18tu8ei2tzv2mgr2v5bbae18lp74qb2t
+name: deaf-daw
+license: MIT
+description: digital audio workstation for cross platform music
+build_dependencies:
+  - src: git https://github.com/capy-ui/capy
+root_dependencies:
