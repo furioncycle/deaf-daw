@@ -1,5 +1,6 @@
 const std = @import("std");
 const deps = @import("deps.zig");
+const zaudio = @import("libs/zaudio/build.zig");
 
 pub fn build(b: *std.build.Builder) !void {
     // Standard target options allows the person running `zig build` to choose
@@ -17,6 +18,8 @@ pub fn build(b: *std.build.Builder) !void {
     exe.setTarget(target);
     exe.setBuildMode(mode);
     try deps.imports.capy.install(exe, pathToCapy);
+    exe.addPackage(zaudio.pkg);
+    zaudio.link(exe);
     exe.install();
 
     const run_cmd = exe.run();

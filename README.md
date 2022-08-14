@@ -34,8 +34,15 @@ Make sure you are using `zigmod` as well.
 
  Docking and undocking should be easy to move were you want, think of window tiling managers and such.
 
+**Current UI Library**
+Using `capy-ui`, wanting to use a zig native gui
+
+
 ### Audio Engine
 I have not clue on this but will showcase a `DOD` approach, I found `OO` style audio engines to be overly complicated for no reason.
+
+Starting to use the following: 
+   `zaudio` which is within the zig-gamedev repo and is a wrapper for minisound c library
 
 ### Synths
 
@@ -58,8 +65,9 @@ The plan is to have various synths
 ## TODO
 
 - [ ] LOGO
-- [ ] Audio Engine
-- [ ] UI main window
+- [ ] Audio Engine using zaudio
+- [ ] Audio Engine standalone
+- [ ] UI main window (capy-ui)
 - [ ] Transport 
 - [ ] Midi 
 - [ ] Synths
