@@ -8,7 +8,8 @@ pub fn main() !void {
     defer _ = gpa.deinit();
 
     const allocator = gpa.allocator();
-    _ = try zaudio.createEngine(allocator, null);
+    const engine = try zaudio.createEngine(allocator, null);
+    defer engine.destroy(allocator);
 
     var window = try capy.Window.init();
 
